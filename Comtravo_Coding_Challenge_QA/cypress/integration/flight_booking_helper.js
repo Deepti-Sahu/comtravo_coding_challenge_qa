@@ -18,11 +18,11 @@ export function selectDate(){
     cy.get('[class="ctr-calendar ctr-calendar--is-range"] button[class="ctr-month__date-button"]').contains(20).click()
 }
 export function selectFlight(){
-    cy.contains('Select option', {timeout : 30000})
+    cy.contains('Select option')
     cy.get('[data-cy="SelectFlightOption"]').eq(0).click()
 }
 export function travellerVerification(){
-    cy.get('ctr-context-header[class="context-header--border-active"]',{timeout:10000}).should('contain','Flight checkout')
+    cy.get('ctr-context-header[class="context-header--border-active"]').should('contain','Flight checkout')
     cy.get('[class="ctr-checkout-traveler__traveler-name"]').should('contain','Sophie lie')
 
 }
